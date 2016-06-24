@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/detailsFragmentPadding"
+    tools:context=".fragments.DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/detailsFragmentPadding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detailsFragmentTitleTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/placeholderText"
+                android:textColor="@color/colorAccentLight"
+                android:textSize="@dimen/detailsFragmentTitleSize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recyclerInfoLinearMargin"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_marginRight="@dimen/detailsActionBarIconMargin"
+                    android:layout_marginLeft="@dimen/detailsActionBarIconMargin"
+                    android:id="@+id/detailsShareIcon"
+                    android:layout_width="@dimen/detailsActionBarIconSize"
+                    android:layout_height="@dimen/detailsActionBarIconSize"
+                    android:contentDescription="@string/detailsShareIconDescription"
+                    android:src="@drawable/ic_share_white_24dp"
+                    android:tint="@color/colorAccent" />
+
+                <ImageView
+                    android:layout_marginRight="@dimen/detailsActionBarIconMargin"
+                    android:layout_marginLeft="@dimen/detailsActionBarIconMargin"
+                    android:id="@+id/detailsIsFavoriteIcon"
+                    android:layout_width="@dimen/detailsActionBarIconSize"
+                    android:layout_height="@dimen/detailsActionBarIconSize"
+                    android:contentDescription="@string/detailsIsFavoriteIconDescription"
+                    android:src="@drawable/ic_favorite_border_white_24dp"
+                    android:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/detailsFragmentPoster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/detailsPosterDescription"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailsFragmentReleaseTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholderText"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/detailsFragmentDateSize"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/detailsFragmentVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeholderText"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/detailsFragmentRateSize"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/imageIconSize"
+                    android:layout_height="@dimen/imageIconSize"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/imageIconMargin"
+                    android:contentDescription="@string/detailsPosterDescription"
+                    android:src="@drawable/ic_thumb_up_black_48dp"
+                    android:tint="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detailsFragmentPlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholderText"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/detailsFragmentPlotSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightHorizontalSeparator"
+            android:layout_marginBottom="@dimen/marginHorizontalSeparator"
+            android:layout_marginTop="@dimen/marginHorizontalSeparator"
+            android:background="@color/colorDarkDarkGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/internalFrameHeight"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginHorizontalSeparator"
+                android:layout_marginTop="@dimen/marginHorizontalSeparator"
+                android:text="@string/detailsFragmentTrailersText"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detailsFragmentRecyclerVideos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightHorizontalSeparator"
+            android:layout_marginBottom="@dimen/marginHorizontalSeparator"
+            android:layout_marginTop="@dimen/marginHorizontalSeparator"
+            android:background="@color/colorDarkDarkGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/internalFrameHeight"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/marginHorizontalSeparator"
+                android:layout_marginTop="@dimen/marginHorizontalSeparator"
+                android:text="@string/detailsFragmentReviewsText"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detailsFragmentRecyclerReviews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

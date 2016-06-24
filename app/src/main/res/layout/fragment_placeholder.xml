@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alex.test.movies.fragments.PlaceholderFragment">
+
+    <ImageView
+        android:id="@+id/detailsBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/detailsBackgroundDescription"
+        android:scaleType="centerCrop" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        class="com.alex.test.movies.fragments.DetailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_details" />
+
+</RelativeLayout>
